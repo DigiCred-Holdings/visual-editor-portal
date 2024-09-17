@@ -27,193 +27,193 @@ import "../styles/DiagramEditor.css";
 
 //Initializes the nodes for the diagram
 let nodes: NodeModel[] = [
-  {
-    id: "NewIdea",
-    height: 60,
-    offsetX: 300,
-    offsetY: 80,
-    shape: { type: "Flow", shape: "Terminator" },
-    annotations: [
-      {
-        content: "Place Order"
-      }
-    ]
-  },
-  {
-    id: "Meeting",
-    height: 60,
-    offsetX: 300,
-    offsetY: 160,
-    shape: { type: "Flow", shape: "Process" },
-    annotations: [
-      {
-        content: "Start Transaction"
-      }
-    ]
-  },
-  {
-    id: "BoardDecision",
-    height: 60,
-    offsetX: 300,
-    offsetY: 240,
-    shape: { type: "Flow", shape: "Process" },
-    annotations: [
-      {
-        content: "Verification"
-      }
-    ]
-  },
-  {
-    id: "Project",
-    height: 60,
-    offsetX: 300,
-    offsetY: 330,
-    shape: { type: "Flow", shape: "Decision" },
-    annotations: [
-      {
-        content: "Credit card valid?"
-      }
-    ]
-  },
-  {
-    id: "End",
-    height: 60,
-    offsetX: 300,
-    offsetY: 430,
-    shape: { type: "Flow", shape: "Decision" },
-    annotations: [
-      {
-        content: "Funds available?"
-      }
-    ]
-  },
-  {
-    id: "node11",
-    height: 60,
-    offsetX: 545,
-    offsetY: 330,
-    shape: { type: "Flow", shape: "Process" },
-    annotations: [
-      {
-        content: "Enter payment method"
-      }
-    ]
-  },
-  {
-    id: "transaction_entered",
-    height: 60,
-    offsetX: 300,
-    offsetY: 630,
-    shape: { type: "Flow", shape: "Terminator" },
-    annotations: [
-      {
-        content: "Log transaction"
-      }
-    ]
-  },
-  {
-    id: "node12",
-    height: 60,
-    offsetX: 480,
-    offsetY: 630,
-    shape: { type: "Flow", shape: "Process" },
-    annotations: [
-      {
-        content: "Reconcile the entries"
-      }
-    ]
-  },
-  {
-    id: "transaction_completed",
-    height: 60,
-    offsetX: 300,
-    offsetY: 530,
-    shape: { type: "Flow", shape: "Process" },
-    annotations: [
-      {
-        content: "Complete Transaction"
-      }
-    ]
-  },
-  {
-    id: "Data",
-    height: 45,
-    offsetX: 110,
-    offsetY: 530,
-    shape: { type: "Flow", shape: "Data" },
-    annotations: [
-      {
-        content: "Send e-mail",
-        margin: { left: 25, right: 25 }
-      }
-    ]
-  },
-  {
-    id: "node10",
-    height: 70,
-    offsetX: 475,
-    offsetY: 530,
-    shape: { type: "Flow", shape: "DirectData" },
-    annotations: [
-      { content: "Customer Database", margin: { left: 25, right: 25 } }
-    ]
-  }
+  // {
+  //   id: "NewIdea",
+  //   height: 60,
+  //   offsetX: 300,
+  //   offsetY: 80,
+  //   shape: { type: "Flow", shape: "Terminator" },
+  //   annotations: [
+  //     {
+  //       content: "Place Order"
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "Meeting",
+  //   height: 60,
+  //   offsetX: 300,
+  //   offsetY: 160,
+  //   shape: { type: "Flow", shape: "Process" },
+  //   annotations: [
+  //     {
+  //       content: "Start Transaction"
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "BoardDecision",
+  //   height: 60,
+  //   offsetX: 300,
+  //   offsetY: 240,
+  //   shape: { type: "Flow", shape: "Process" },
+  //   annotations: [
+  //     {
+  //       content: "Verification"
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "Project",
+  //   height: 60,
+  //   offsetX: 300,
+  //   offsetY: 330,
+  //   shape: { type: "Flow", shape: "Decision" },
+  //   annotations: [
+  //     {
+  //       content: "Credit card valid?"
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "End",
+  //   height: 60,
+  //   offsetX: 300,
+  //   offsetY: 430,
+  //   shape: { type: "Flow", shape: "Decision" },
+  //   annotations: [
+  //     {
+  //       content: "Funds available?"
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "node11",
+  //   height: 60,
+  //   offsetX: 545,
+  //   offsetY: 330,
+  //   shape: { type: "Flow", shape: "Process" },
+  //   annotations: [
+  //     {
+  //       content: "Enter payment method"
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "transaction_entered",
+  //   height: 60,
+  //   offsetX: 300,
+  //   offsetY: 630,
+  //   shape: { type: "Flow", shape: "Terminator" },
+  //   annotations: [
+  //     {
+  //       content: "Log transaction"
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "node12",
+  //   height: 60,
+  //   offsetX: 480,
+  //   offsetY: 630,
+  //   shape: { type: "Flow", shape: "Process" },
+  //   annotations: [
+  //     {
+  //       content: "Reconcile the entries"
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "transaction_completed",
+  //   height: 60,
+  //   offsetX: 300,
+  //   offsetY: 530,
+  //   shape: { type: "Flow", shape: "Process" },
+  //   annotations: [
+  //     {
+  //       content: "Complete Transaction"
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "Data",
+  //   height: 45,
+  //   offsetX: 110,
+  //   offsetY: 530,
+  //   shape: { type: "Flow", shape: "Data" },
+  //   annotations: [
+  //     {
+  //       content: "Send e-mail",
+  //       margin: { left: 25, right: 25 }
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: "node10",
+  //   height: 70,
+  //   offsetX: 475,
+  //   offsetY: 530,
+  //   shape: { type: "Flow", shape: "DirectData" },
+  //   annotations: [
+  //     { content: "Customer Database", margin: { left: 25, right: 25 } }
+  //   ]
+  // }
 ];
 //Initializes the connector for the diagram
 let connectors: ConnectorModel[] = [
-  {
-    id: "connector1",
-    sourceID: "NewIdea",
-    targetID: "Meeting"
-  },
-  { id: "connector2", sourceID: "Meeting", targetID: "BoardDecision" },
-  { id: "connector3", sourceID: "BoardDecision", targetID: "Project" },
-  {
-    id: "connector4",
-    sourceID: "Project",
-    annotations: [{ content: "Yes", style: { fill: "white" } }],
-    targetID: "End"
-  },
-  {
-    id: "connector5",
-    sourceID: "End",
-    annotations: [{ content: "Yes", style: { fill: "white" } }],
-    targetID: "transaction_completed"
-  },
-  {
-    id: "connector6",
-    sourceID: "transaction_completed",
-    targetID: "transaction_entered"
-  },
-  { id: "connector7", sourceID: "transaction_completed", targetID: "Data" },
-  { id: "connector8", sourceID: "transaction_completed", targetID: "node10" },
-  {
-    id: "connector9",
-    sourceID: "node11",
-    targetID: "Meeting",
-    type: 'Orthogonal',
-    segments: [{ direction: "Top", type: 'Orthogonal', length: 120 }]
-  },
-  {
-    id: "connector10",
-    sourceID: "End",
-    annotations: [{ content: "No", style: { fill: "white" } }],
-    targetID: "node11",
-    type: 'Orthogonal',
-    segments: [{ direction: "Right", type: 'Orthogonal', length: 100 }]
-  },
-  {
-    id: "connector11",
-    sourceID: "Project",
-    annotations: [{ content: "No", style: { fill: "white" } }],
-    targetID: "node11"
-  },
-  {
-    id: "connector12",
-    style: { strokeDashArray: "2,2" },
-    sourceID: "transaction_entered",
-    targetID: "node12"
-  }
+  // {
+  //   id: "connector1",
+  //   sourceID: "NewIdea",
+  //   targetID: "Meeting"
+  // },
+  // { id: "connector2", sourceID: "Meeting", targetID: "BoardDecision" },
+  // { id: "connector3", sourceID: "BoardDecision", targetID: "Project" },
+  // {
+  //   id: "connector4",
+  //   sourceID: "Project",
+  //   annotations: [{ content: "Yes", style: { fill: "white" } }],
+  //   targetID: "End"
+  // },
+  // {
+  //   id: "connector5",
+  //   sourceID: "End",
+  //   annotations: [{ content: "Yes", style: { fill: "white" } }],
+  //   targetID: "transaction_completed"
+  // },
+  // {
+  //   id: "connector6",
+  //   sourceID: "transaction_completed",
+  //   targetID: "transaction_entered"
+  // },
+  // { id: "connector7", sourceID: "transaction_completed", targetID: "Data" },
+  // { id: "connector8", sourceID: "transaction_completed", targetID: "node10" },
+  // {
+  //   id: "connector9",
+  //   sourceID: "node11",
+  //   targetID: "Meeting",
+  //   type: 'Orthogonal',
+  //   segments: [{ direction: "Top", type: 'Orthogonal', length: 120 }]
+  // },
+  // {
+  //   id: "connector10",
+  //   sourceID: "End",
+  //   annotations: [{ content: "No", style: { fill: "white" } }],
+  //   targetID: "node11",
+  //   type: 'Orthogonal',
+  //   segments: [{ direction: "Right", type: 'Orthogonal', length: 100 }]
+  // },
+  // {
+  //   id: "connector11",
+  //   sourceID: "Project",
+  //   annotations: [{ content: "No", style: { fill: "white" } }],
+  //   targetID: "node11"
+  // },
+  // {
+  //   id: "connector12",
+  //   style: { strokeDashArray: "2,2" },
+  //   sourceID: "transaction_entered",
+  //   targetID: "node12"
+  // }
 ];
 
 //Initialize the flowshapes for the symbol palatte
@@ -721,6 +721,9 @@ function historyChange(args:any){
           <div className="sb-mobile-palette-bar">
             <div id="palette-icon" style={{ float: "right" }} className="e-ddb-icons1 e-toggle-palette"></div>
           </div>
+
+          <div className="diagram-container">
+
           <div
             id="palette-space" className="sb-mobile-palette"
           >
@@ -780,6 +783,7 @@ function historyChange(args:any){
             />
           </div>
           
+          <div className="diagram-and-toolbar-container">
           <div
             id="diagram-space" className="sb-mobile-diagram"
           >
@@ -793,7 +797,7 @@ function historyChange(args:any){
                 verticalGridlines: gridlines
               }}
               nodes={nodes}
-              connectors={connectors} //Sets the default values of a node
+              connectors={connectors} 
               getNodeDefaults={(node: NodeModel) => {
                 if (node.width === undefined) {
                   node.width = 145;
@@ -988,6 +992,8 @@ function historyChange(args:any){
               >
               </ToolbarComponent>
             </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
