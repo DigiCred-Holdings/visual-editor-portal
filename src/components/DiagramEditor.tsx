@@ -218,11 +218,97 @@ let toolbarItems: any = [
   },
 ];
 
+function generateWorkflowJSON() {
+  const diagram = diagramInstance;
+  const nodes = diagram.nodes;
+  const connectors = diagram.connectors;
+
+  let workflow = {
+    name: "Generated Workflow",
+    workflowID: "generated-workflow-" + Date.now(),
+    formatVersion: "0.0.1",
+    initialState: null,
+    render: [
+      {
+        stylesID: "",
+        type: "button",
+        styles: {
+          fontType: "Arial",
+          textColor: "#000000",
+          backgroundColor: "#ffffff"
+        }
+      }
+    ],
+    states: []
+  };
+
+  // Process nodes to create states
+  nodes.forEach((node, index) => {
+    const state = {
+      stateID: node.id,
+      displayData: [],
+      transitions: [],
+      actions: []
+    };
+
+    // Set initial state to the first node
+    if (index === 0) {
+      workflow.initialState = node.id;
+    }
+
+    // Add a title based on the node's annotation
+    if (node.annotations && node.annotations.length > 0) {
+      state.displayData.push({
+        type: "title",
+        text: node.annotations[0].content
+      });
+    }
+
+    // Add a generic text (you might want to customize this)
+    state.displayData.push({
+      type: "text",
+      text: "This is state " + node.id
+    });
+
+    workflow.states.push(state);
+  });
+
+  // Process connectors to create transitions
+  connectors.forEach((connector) => {
+    const sourceState = workflow.states.find(state => state.stateID === connector.sourceID);
+    const targetState = workflow.states.find(state => state.stateID === connector.targetID);
+
+    if (sourceState && targetState) {
+      const actionID = "action_" + connector.id;
+      
+      // Add a button for this transition
+      sourceState.displayData.push({
+        type: "button",
+        actionID: actionID,
+        label: "Go to " + targetState.stateID
+      });
+
+      // Add the transition
+      sourceState.transitions.push({
+        actionID: actionID,
+        type: "state",
+        value: targetState.stateID,
+        condition: {}
+      });
+    }
+  });
+
+  return JSON.stringify([workflow], null, 2);
+}
+
 function generateWorkflow(args) {
-  // Add your logic for generating workflow here
   console.log('Generate Workflow clicked');
-  // For example:
-  // callYourApiToGenerateWorkflow();
+  const workflowJSON = generateWorkflowJSON();
+  console.log(workflowJSON);
+  
+  // Here you can add logic to save or display the generated JSON
+  // For example, you could open a modal dialog with the JSON
+  // or send it to a server
 }
 
 function uploadWorkflow(args) {
